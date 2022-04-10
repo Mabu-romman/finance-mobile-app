@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewActivity">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Review"
+        android:textColor="#47B4C3"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewBackButton" />
+
+    <Button
+        android:id="@+id/viewBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#47B4C3"
+        android:text="Back"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/monthView"
+        android:layout_width="90dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="29dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewBackButton" />
+
+    <Spinner
+        android:id="@+id/yearView"
+        android:layout_width="90dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="13dp"
+        app:layout_constraintStart_toEndOf="@+id/monthView"
+        app:layout_constraintTop_toTopOf="@+id/monthView" />
+
+    <Spinner
+        android:id="@+id/incomeTypeView"
+        android:layout_width="90dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="13dp"
+        app:layout_constraintStart_toEndOf="@+id/yearView"
+        app:layout_constraintTop_toTopOf="@+id/yearView" />
+
+    <Spinner
+        android:id="@+id/expenseTypeView"
+        android:layout_width="90dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/incomeTypeView"
+        app:layout_constraintTop_toTopOf="@+id/incomeTypeView" />
+
+    <ListView
+        android:id="@+id/viewList"
+        android:layout_width="346dp"
+        android:layout_height="327dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/viewButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </ListView>
+
+    <Button
+        android:id="@+id/viewButton"
+        android:layout_width="143dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#47B4C3"
+        android:text="Income"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/viewButton2"
+        android:layout_width="143dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#47B4C3"
+        android:text="Expense"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="Month"
+        android:textColor="#47B4C3"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/monthView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:text="Year"
+        android:textColor="#47B4C3"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/yearView"
+        app:layout_constraintStart_toEndOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="42dp"
+        android:text="Income"
+        android:textColor="#47B4C3"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/incomeTypeView"
+        app:layout_constraintEnd_toStartOf="@+id/textView16" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Expense"
+        android:textColor="#47B4C3"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/expenseTypeView"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
